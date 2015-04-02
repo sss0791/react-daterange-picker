@@ -1,5 +1,6 @@
 import React from 'react';
 import bemCx from './bemCx';
+import assign from 'object.assign';
 
 
 var BemMixin = {
@@ -52,7 +53,7 @@ var BemMixin = {
       block: this.getBemBlock(),
     };
 
-    Object.assign(opts, options);
+    assign(opts, options);
     return bemCx(opts);
   }
 };
